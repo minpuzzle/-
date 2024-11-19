@@ -4,66 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>레시피 검색 사이트</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      margin-top: 20px;
-    }
-    .search-container {
-      margin-bottom: 20px;
-    }
-    #search-input {
-    width: 500px;  /* 원하는 너비로 설정 */
-    padding: 8px;  /* 입력창 안쪽 여백 */
-    font-size: 16px;  /* 글자 크기 */
-  }
-
-  /* 검색 버튼 크기 조정 */
-  .search-container button {
-    padding: 8px 12px;  /* 버튼 안쪽 여백 */
-    font-size: 16px;  /* 글자 크기 */
-    margin-left: 5px;  /* 입력창과 버튼 사이 간격 */
-  }
-    .filter-container {
-      margin: 10px 0;
-    }
-    .dropdown, .ingredient-search {
-      display: none;
-      margin-top: 10px;
-    }
-    .dropdown button, .ingredient-search input, .ingredient-search button {
-      margin: 5px;
-    }
-    #recipe-list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      width: 80%;
-      max-width: 1000px;
-      justify-content: center;
-    }
-    .recipe-card {
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .recipe-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-    .recipe-card:hover {
-      transform: scale(1.05);
-    }
-  </style>
+  <link rel="stylesheet" href="css.css" />
 </head>
 <body>
 
@@ -83,7 +24,7 @@
 
 <!-- 종류 드롭다운 메뉴 -->
 <div id="type-dropdown" class="dropdown">
-  <button onclick="filterByType('한국')">한식</button>
+  <button onclick="filterByType('한식')">한식</button>
   <button onclick="filterByType('양식')">양식</button>
   <button onclick="filterByType('일식')">일식</button>
   <button onclick="filterByType('중식')">중식</button>
@@ -95,10 +36,10 @@
   <button onclick="searchByIngredient()">검색</button>
 </div>
 
+<!-- 레시피 카드가 표시될 영역 -->
 <div id="recipe-list"></div>
 
-<script src="javas.js">
-</script>
+<script src="javas.js"></script>
 
 </body>
 </html>

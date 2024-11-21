@@ -146,5 +146,19 @@ document.getElementById("recipe-img").alt = recipe.name;
 document.getElementById("recipe-ingredients").textContent = recipe.ingredients.join(", ");
 
 // 만드는 방법 표시
-document.getElementById("recipe-instructions").textContent = recipe.instructions;
+const instructionsElement = document.getElementById("recipe-instructions");
+
+// 순서 있는 목록(ol) 생성
+const ol = document.createElement("ol");
+
+// 각 단계를 목록 항목(li)으로 추가
+recipe.instructions.forEach(step => {
+  const li = document.createElement("li"); // 목록 항목 생성
+  li.textContent = step; // 텍스트 내용 설정
+  ol.appendChild(li); // ol에 항목 추가
+});
+
+// 생성한 ol을 #recipe-instructions에 추가
+instructionsElement.appendChild(ol);
+
 

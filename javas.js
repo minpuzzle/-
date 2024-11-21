@@ -210,3 +210,11 @@ recipe.instructions.forEach(step => {
 instructionsElement.appendChild(ol);
 
 
+// 식재료로 검색하는 함수
+function searchByIngredient() {
+  const ingredientInput = document.getElementById("ingredient-input").value.toLowerCase(); // 입력받은 재료명을 소문자로 변환
+  const filteredRecipes = recipes.filter(recipe =>
+      recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(ingredientInput)) // 재료 목록 중 입력 값이 포함된 항목 찾기
+  );
+  displayRecipes(filteredRecipes); // 필터링된 레시피를 화면에 표시
+}

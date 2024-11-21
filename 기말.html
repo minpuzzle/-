@@ -19,7 +19,9 @@
 <!-- 필터 버튼 -->
 <div class="filter-container">
   <button onclick="toggleDropdown('type')">종류로 검색</button>
-  <button onclick="toggleDropdown('ingredient')">식재료로 검색</button>
+  <label for="ingredient-input">식재료로 검색:</label>
+  <input type="text" id="ingredient-input" placeholder="예: 고추장, 소고기">
+  <button onclick="searchByIngredient()">검색</button>
 </div>
 
 <!-- 종류 드롭다운 메뉴 -->

@@ -23,6 +23,7 @@ h1 {
 .filter-container {
     margin: 10px 0;
 }
+
 .dropdown, .ingredient-search {
     display: none;
     margin-top: 10px;

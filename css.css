@@ -9,19 +9,24 @@ h1 {
 }
 .search-container {
     margin-bottom: 20px;
+    text-align: center;
 }
 #search-input {
     width: 500px;
     padding: 8px;
     font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 .search-container button {
     padding: 8px 12px;
     font-size: 16px;
     margin-left: 5px;
+
 }
 .filter-container {
     margin: 10px 0;
+    justify-content: center;
 }
 
 .dropdown, .ingredient-search {
@@ -37,18 +42,99 @@ h1 {
     justify-content: center;
 }
 .recipe-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
+    border: 1px solid #ddd; /* 연한 테두리 */
+    background: #fff; /* 배경색: 흰색 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 카드에 그림자 추가 */
+    padding: 15px;
+    border-radius: 10px; /* 모서리를 더 둥글게 */
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* 그림자 효과와 함께 확대 */
 }
+
 .recipe-card img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px; /* 이미지도 카드 모양에 맞춰 둥글게 */
+    margin-bottom: 10px; /* 이미지 아래 간격 추가 */
 }
+
 .recipe-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* 확대 효과 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* 호버 시 그림자 더 강하게 */
+    background: #f9f9f9; /* 약간의 배경 변화 */
 }
+
+.recipe-card button {
+    background-color: #FF6F3C; /* 버튼 색상: 주황색 */
+    color: #fff; /* 버튼 텍스트: 흰색 */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.recipe-card button:hover {
+    background-color: #FF834F; /* 호버 시 버튼 색 더 밝게 */
+}
+
+/* 로고 꾸미기 */
+.header {
+    width: 100%;
+    background-color: #FF6F3C;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    position: relative; /* 네비게이션이 포함될 경우를 대비 */
+}
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+
+button {
+    border: none;
+    border-radius: 5px; /* 버튼 모서리를 둥글게 */
+    font-size: 16px; /* 버튼 글자 크기 */
+    font-weight: bold; /* 글자 두껍게 */
+    cursor: pointer; /* 클릭 가능한 요소로 표시 */
+    transition: all 0.3s ease; /* 애니메이션 효과 */
+  }
+
+  /* 새로고침 버튼 스타일 */
+.refresh-button {
+    background-color: #6c757d; /* 어두운 회색 */
+    color: #ffffff; /* 흰색 글자 */
+    width: 100px;
+    height: 40px;
+  }
+  
+  .refresh-button:hover {
+    background-color: #5a6268; /* 약간 밝은 회색 */
+  }
+  
+  /* 필터 버튼 스타일 */
+  .filter-button {
+    background-color: #FF6F3C; /* 주황색 */
+    color: #ffffff; /* 흰색 글자 */
+    width: 200px;
+    height: 40px;
+  }
+  
+  .filter-button:hover {
+    background-color: #FF834F; /* 약간 밝은 주황색 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 호버 시 그림자 효과 */
+  }

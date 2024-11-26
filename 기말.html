@@ -8,34 +8,38 @@
 </head>
 <body>
 
-<h1>요리 레시피 사이트</h1>
+<header class="header">
+  <div class="logo">🍳 Recipe Finder</div>
+</header>
+<br>
 
 <!-- 검색 폼 -->
 <div class="search-container">
   <input type="text" id="search-input" placeholder="검색어 입력">
-  <button onclick="searchRecipe()">검색</button>
+  <button style="width: 75px;" onclick="searchRecipe()">검색</button>
 </div>
 
 <!-- 필터 버튼 -->
 <div class="filter-container">
-  <button onclick="toggleDropdown('type')">종류로 검색</button>
-  <button onclick="toggleDropdown('ingredient')">식재료로 검색</button>
+  <button class="refresh-button" onclick="location.reload()">새로고침</button>
+  <button class="filter-button" onclick="toggleDropdown('type'); resetToDefault();">종류로 검색</button>
+  <button class="filter-button" onclick="toggleDropdown('ingredient'); resetToDefault();">식재료로 검색</button>
 </div>
 
 <!-- 종류 드롭다운 메뉴 -->
 <div id="type-dropdown" class="dropdown">
-  <button onclick="filterByType('한식')">한식</button>
-  <button onclick="filterByType('양식')">양식</button>
-  <button onclick="filterByType('일식')">일식</button>
-  <button onclick="filterByType('중식')">중식</button>
+  <button style='width: 60px;' onclick="filterByType('한식')">한식</button>
+  <button style='width: 60px;' onclick="filterByType('양식')">양식</button>
+  <button style='width: 60px;' onclick="filterByType('일식')">일식</button>
+  <button style='width: 60px;' onclick="filterByType('중식')">중식</button>
 </div>
 
 <!-- 식재료 입력창 -->
-<div id="ingredient-dropdown">
-  <input type="text" id="ingredient-input" placeholder="식재료 입력">
-  <button onclick="searchByIngredient()">검색</button>
+<div id="ingredient-dropdown" class="dropdown">
+  <input style='width: 300px; height: 30px;'type="text" id="ingredient-input" placeholder="식재료 입력">
+  <button style="width: 60px; height: 40px;" onclick="searchByIngredient()">검색</button>
 </div>
-
+<br>
 <!-- 레시피 카드가 표시될 영역 -->
 <div id="recipe-list"></div>
 

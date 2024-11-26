@@ -218,3 +218,8 @@ function searchByIngredient() {
   );
   displayRecipes(filteredRecipes); // 필터링된 레시피를 화면에 표시
 }
+
+// 초기 상태로 되돌리는 함수
+function resetToDefault() {
+  renderCards(initialRecipes); // 초기 데이터를 다시 렌더링
+}
